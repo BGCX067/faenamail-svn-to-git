@@ -1,0 +1,71 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FaenaMail", "FaenaMail.vbproj", "{BF5F97BB-69D5-42AB-881F-284EC27F5AD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net", "..\NET\Net.csproj", "{7AB36CCF-5FFD-4780-A54E-A102ECA028B5}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FaenaMailService", "..\WindowsService1\FaenaMailService.vbproj", "{556E8758-3071-490D-A17B-D736339CED90}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ClassLibrary1", "..\ClassLibrary1\ClassLibrary1.vbproj", "{D1F18AB5-BD4C-494F-8132-6A38AE1E26F3}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "..\Setup1\Setup1.vdproj", "{EC7C68FE-AF5F-4522-B9C0-97281585390A}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 6
+		SccLocalPath0 = .
+		CanCheckoutShared = false
+		SolutionUniqueID = {ED749875-588D-4C25-8A86-3BBB0E2ECAD4}
+		SccProjectUniqueName1 = ..\\NET\\Net.csproj
+		SccProjectName1 = \u0022$/Faena\u0020Mail/Net\u0022,\u0020ALAAAAAA
+		SccLocalPath1 = ..\\NET
+		CanCheckoutShared = false
+		SccProjectUniqueName2 = ..\\ClassLibrary1\\ClassLibrary1.vbproj
+		SccProjectName2 = \u0022$/Faena\u0020Mail/ClassLibrary1\u0022,\u0020POAAAAAA
+		SccLocalPath2 = ..\\ClassLibrary1
+		CanCheckoutShared = false
+		SccProjectUniqueName3 = ..\\Setup1\\Setup1.vdproj
+		SccProjectName3 = \u0022$/Faena\u0020Mail/Setup1\u0022,\u0020VOAAAAAA
+		SccLocalPath3 = ..
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection3 = Setup1\\
+		SccProjectUniqueName4 = FaenaMail.vbproj
+		SccLocalPath4 = .
+		CanCheckoutShared = false
+		SccProjectUniqueName5 = ..\\WindowsService1\\FaenaMailService.vbproj
+		SccProjectName5 = \u0022$/Faena\u0020Mail/WindowsService1\u0022,\u0020IOAAAAAA
+		SccLocalPath5 = ..\\WindowsService1
+		CanCheckoutShared = false
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+		{BF5F97BB-69D5-42AB-881F-284EC27F5AD8}.0 = {7AB36CCF-5FFD-4780-A54E-A102ECA028B5}
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{BF5F97BB-69D5-42AB-881F-284EC27F5AD8}.Debug.ActiveCfg = Debug|.NET
+		{BF5F97BB-69D5-42AB-881F-284EC27F5AD8}.Debug.Build.0 = Debug|.NET
+		{BF5F97BB-69D5-42AB-881F-284EC27F5AD8}.Release.ActiveCfg = Release|.NET
+		{BF5F97BB-69D5-42AB-881F-284EC27F5AD8}.Release.Build.0 = Release|.NET
+		{7AB36CCF-5FFD-4780-A54E-A102ECA028B5}.Debug.ActiveCfg = Debug|.NET
+		{7AB36CCF-5FFD-4780-A54E-A102ECA028B5}.Debug.Build.0 = Debug|.NET
+		{7AB36CCF-5FFD-4780-A54E-A102ECA028B5}.Release.ActiveCfg = Release|.NET
+		{7AB36CCF-5FFD-4780-A54E-A102ECA028B5}.Release.Build.0 = Release|.NET
+		{556E8758-3071-490D-A17B-D736339CED90}.Debug.ActiveCfg = Debug|.NET
+		{556E8758-3071-490D-A17B-D736339CED90}.Debug.Build.0 = Debug|.NET
+		{556E8758-3071-490D-A17B-D736339CED90}.Release.ActiveCfg = Release|.NET
+		{556E8758-3071-490D-A17B-D736339CED90}.Release.Build.0 = Release|.NET
+		{D1F18AB5-BD4C-494F-8132-6A38AE1E26F3}.Debug.ActiveCfg = Debug|.NET
+		{D1F18AB5-BD4C-494F-8132-6A38AE1E26F3}.Debug.Build.0 = Debug|.NET
+		{D1F18AB5-BD4C-494F-8132-6A38AE1E26F3}.Release.ActiveCfg = Release|.NET
+		{D1F18AB5-BD4C-494F-8132-6A38AE1E26F3}.Release.Build.0 = Release|.NET
+		{EC7C68FE-AF5F-4522-B9C0-97281585390A}.Debug.ActiveCfg = Debug
+		{EC7C68FE-AF5F-4522-B9C0-97281585390A}.Release.ActiveCfg = Release
+		{EC7C68FE-AF5F-4522-B9C0-97281585390A}.Release.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

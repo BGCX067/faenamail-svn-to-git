@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?><!--This is a script file composed by Faena Mail. http://www.faena.com--><scriptfile version="1" startupbox="ScriptBox 1"><scriptbox type="IfScript"><name>ScriptBox 1</name><left>26</left><top>21</top><textbox>If the To line contains  specific words test@faena.com
+Then Go on .</textbox><settingif>6</settingif><settingifdes>test@faena.com</settingifdes><settingaction>5</settingaction><settingactiondes /><settingbcc /><settingmsg /><settingattachment /><settingpath>ScriptBox 3</settingpath></scriptbox><scriptbox type="IfScript"><name>ScriptBox 3</name><left>20</left><top>171</top><textbox>If the Subject line contains  specific words Notification of Payment Received
+Then Go on .</textbox><settingif>2</settingif><settingifdes>Notification of Payment Received</settingifdes><settingaction>5</settingaction><settingactiondes /><settingbcc /><settingmsg /><settingattachment /><settingpath>ScriptBox 5</settingpath></scriptbox><scriptbox type="email"><name>ScriptBox 4</name><left>246</left><top>231</top><textbox>LookFor("Item Name:") Registration Number Delivery</textbox><settingif>0</settingif><settingifdes>&lt;=From&gt;</settingifdes><settingaction>0</settingaction><settingactiondes /><settingbcc /><settingmsg>Dear LookFor("Buyer:"),
+
+The following email contains registration code for LookFor("Item Name:").
+Please save these numbers for your records.
+
+Serial Number/Registration Number: &lt;=regcode&gt;
+
+
+Transaction ID: LookFor("Transaction ID:")
+Buyer: LookFor("Buyer:")
+Order Type: PayPal
+Quantity: LookFor("Quantity:")
+Amount: LookFor("Amount:")
+
+
+********************************
+For tech-support please contact support@faena.com
+For sale related question please contact sales@faena.com
+or visit http://www.faena.com Customer Support page
+
+Thank you for using Faena Technologies software,
+Faena Technologies</settingmsg><settingattachment /><settingpath /></scriptbox><scriptbox type="SQL"><name>ScriptBox 5</name><left>252</left><top>53</top><textbox>Select regcode from RegCodeStock where productid=1 and solddate is null;
+Update regcodestock set Solddate=now where regcode='&lt;=RegCode&gt;';
+</textbox><settingif>0</settingif><settingifdes>Select regcode from RegCodeStock where productid=1 and solddate is null;
+Update regcodestock set Solddate=now where regcode='&lt;=RegCode&gt;';
+</settingifdes><settingaction>0</settingaction><settingactiondes /><settingbcc /><settingmsg /><settingattachment /><settingpath>ScriptBox 4</settingpath></scriptbox></scriptfile>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?><!--This is a script file composed by Faena Mail. http://www.faena.com--><scriptfile version="1" startupbox="NoItSelf"><scriptbox type="IfScript"><name>Filter</name><left>21</left><top>90</top><textbox>If the To line contains  specific words support@faena.com
+Then Go on .</textbox><settingif>6</settingif><settingifdes>support@faena.com</settingifdes><settingaction>5</settingaction><settingactiondes /><settingbcc /><settingmsg /><settingattachment /><settingpath>Response</settingpath></scriptbox><scriptbox type="email"><name>Response</name><left>23</left><top>186</top><textbox>RE: &lt;=Subject&gt;</textbox><settingif>0</settingif><settingifdes>&lt;=From&gt;</settingifdes><settingaction>0</settingaction><settingactiondes /><settingbcc>gzv@faena.com</settingbcc><settingmsg>THIS IS AN AUTOMATIC ACKNOWLEDGEMENT RECEIPT OF YOUR E-MAIL
+
+Our response time will vary depending on the number of e-mails received.
+
+Should you require immediate assistance, our technolical support information
+line can be reached at 604-219-9296 within the Vancouver Area.
+
+Thank you for contacting Faena on this matter.
+
+Regards,
+
+Auto Response Bot
+-------------------------------------------------------
+Faena Technologies
+www.faena.com
+support@faena.com</settingmsg><settingattachment /><settingpath /></scriptbox><scriptbox type="IfScript"><name>NoItSelf</name><left>23</left><top>-4</top><textbox>If the From line contains specific words support@faena.com
+Then Do not process .</textbox><settingif>0</settingif><settingifdes>support@faena.com</settingifdes><settingaction>4</settingaction><settingactiondes /><settingbcc /><settingmsg /><settingattachment /><settingpath>Filter</settingpath></scriptbox></scriptfile>

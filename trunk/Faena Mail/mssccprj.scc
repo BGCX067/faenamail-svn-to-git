@@ -1,0 +1,25 @@
+SCC = This is a Source Code Control file
+
+[WindowsApplication1.sln]
+SCC_Aux_Path = "C:\MyProjects\VSS"
+SCC_Project_Name = "$/FaenaLightWind", JIAAAAAA
+
+[WindowsApplication1.vbproj]
+SCC_Aux_Path = "C:\MyProjects\VSS"
+SCC_Project_Name = "$/FaenaLightWind", JIAAAAAA
+
+[FaenaLightWind.sln]
+SCC_Aux_Path = "C:\MyProjects\VSS"
+SCC_Project_Name = "$/LightWind/FaenaLightWind", JIAAAAAA
+
+[FaenaLightWind.vbproj]
+SCC_Aux_Path = "C:\MyProjects\VSS"
+SCC_Project_Name = "$/LightWind/FaenaLightWind", JIAAAAAA
+
+[FaenaMail.sln]
+SCC_Aux_Path = "D:\Backups"
+SCC_Project_Name = "$/FaenaMail/FaenaMail", DEAAAAAA
+
+[FaenaMail.vbproj]
+SCC_Aux_Path = "\\Faenapchome1\backups\"
+SCC_Project_Name = "$/FaenaMail/Faena Mail", YFYAAAAA

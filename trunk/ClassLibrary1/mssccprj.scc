@@ -1,0 +1,9 @@
+SCC = This is a Source Code Control file
+
+[ClassLibrary1.vbproj]
+SCC_Aux_Path = "D:\Backups"
+SCC_Project_Name = "$/FaenaMail/ClassLibrary1", FEAAAAAA
+
+[FaenaMailLibrary.vbproj]
+SCC_Aux_Path = "\\Faenapchome1\backups\"
+SCC_Project_Name = "$/FaenaMail/ClassLibrary1", AGYAAAAA

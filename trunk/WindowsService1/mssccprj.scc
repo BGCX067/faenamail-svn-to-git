@@ -1,0 +1,13 @@
+SCC = This is a Source Code Control file
+
+[WindowsService1.vbproj]
+SCC_Aux_Path = "C:\MyProjects\VSS"
+SCC_Project_Name = "$/LightWind/WindowsService1", IOAAAAAA
+
+[LightWindService.vbproj]
+SCC_Aux_Path = "C:\MyProjects\VSS"
+SCC_Project_Name = "$/LightWind/WindowsService1", IOAAAAAA
+
+[FaenaMailService.vbproj]
+SCC_Aux_Path = "\\Faenapchome1\backups\"
+SCC_Project_Name = "$/FaenaMail/WindowsService1", FNYAAAAA

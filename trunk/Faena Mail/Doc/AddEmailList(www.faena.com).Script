@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--This is a script file composed by Faena LightWind. http://www.faena.com-->
+<scriptfile version="1" startupbox="Filter">
+  <scriptbox type="MailList">
+    <name>AddMail</name>
+    <left>41</left>
+    <top>96</top>
+    <textbox>LookFor("Email:")</textbox>
+    <settingif>0</settingif>
+    <settingifdes>LookFor("Email:")</settingifdes>
+    <settingaction>0</settingaction>
+    <settingactiondes />
+    <settingbcc />
+    <settingmsg />
+    <settingattachment />
+    <settingpath>ResponseEmail</settingpath>
+  </scriptbox>
+  <scriptbox type="IfScript">
+    <name>Filter</name>
+    <left>17</left>
+    <top>0</top>
+    <textbox>
+      If the Subject line contains  specific words emaillistform at www.faena.com/project_lightwind.htm
+      Then Go on .
+    </textbox>
+    <settingif>2</settingif>
+    <settingifdes>emailform01 at www.faena.com/aboutus.htm</settingifdes>
+    <settingaction>5</settingaction>
+    <settingactiondes />
+    <settingbcc />
+    <settingmsg />
+    <settingattachment />
+    <settingpath>AddMail</settingpath>
+  </scriptbox>
+  <scriptbox type="email">
+    <name>ResponseEmail</name>
+    <left>82</left>
+    <top>191</top>
+    <textbox>Welcome to Faena email list</textbox>
+    <settingif>0</settingif>
+    <settingifdes>LookFor("Email:")</settingifdes>
+    <settingaction>0</settingaction>
+    <settingactiondes />
+    <settingbcc />
+    <settingmsg>
+      If you want to remove from this email list, please send an email to notify@faena.com  put REMOVE ME in the subject line.
+
+      This is an auto response mail. Do not reply to this email.
+
+      -------------------------------------------------------------------------
+      Faena Mail v1.0
+    </settingmsg>
+    <settingattachment />
+    <settingpath />
+  </scriptbox>
+</scriptfile>

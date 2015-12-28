@@ -1,0 +1,377 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BF5F97BB-69D5-42AB-881F-284EC27F5AD8}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>LetterClock.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>FaenaMail</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <OptionCompare>Text</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>On</OptionStrict>
+    <RootNamespace>FaenaMail</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>FaenaMail.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>FaenaMail.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032</NoWarn>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic">
+      <Name>Microsoft.VisualBasic</Name>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.DirectoryServices">
+      <Name>system.directoryservices</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.ServiceProcess">
+      <Name>System.ServiceProcess</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="ValidatorControl">
+      <Name>validatorcontrol</Name>
+      <HintPath>..\..\validatorcontrol\bin\validatorcontrol.dll</HintPath>
+    </Reference>
+    <ProjectReference Include="..\ClassLibrary1\FaenaMailLibrary.vbproj">
+      <Name>FaenaMailLibrary</Name>
+      <Project>{D1F18AB5-BD4C-494F-8132-6A38AE1E26F3}</Project>
+      <Package>{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\LibExcept\LibExcept.vbproj">
+      <Name>LibExcept</Name>
+      <Project>{101C7640-9970-4AB6-9F25-E4784A583490}</Project>
+      <Package>{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Doc\1stTimeMainScreen.psd" />
+    <None Include="Doc\AddEmailList%28www.faena.com%29.Script" />
+    <None Include="Doc\AddEmailList.Script" />
+    <None Include="Doc\ArrowFlash2.psd" />
+    <None Include="Doc\AutoAnswer.vsd" />
+    <None Include="Doc\column with contents_image001.psd" />
+    <None Include="Doc\column-with-contents_image0.jpg.tmp" />
+    <None Include="Doc\column-with-contents_image0.jpg_1.tmp" />
+    <None Include="Doc\column-with-contents_image0.jpg_2.tmp" />
+    <None Include="Doc\column-with-contents_image1.jpg.tmp" />
+    <None Include="Doc\DogMail.psd" />
+    <None Include="Doc\FaenaLightWindChangeControl.doc" />
+    <None Include="Doc\FaenaMail.psd" />
+    <None Include="Doc\FaenaMailClock.psd" />
+    <None Include="Doc\FaenaMailDBDataSet.xsc">
+      <DependentUpon>FaenaMailDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Doc\FaenaMailDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FaenaMailDBDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Doc\FaenaMailDBDataSet.xss">
+      <DependentUpon>FaenaMailDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Doc\FaenaMailIcon.psd" />
+    <None Include="Doc\FaenaMailScriptDemoRegisterBox.psd" />
+    <None Include="Doc\FaenaMailScriptDesktop.psd" />
+    <None Include="Doc\FaenaTechnologies.psd" />
+    <None Include="Doc\faq.url" />
+    <None Include="Doc\FBRRegistration.Script" />
+    <None Include="Doc\LightWind Script # 3.Script" />
+    <None Include="Doc\MailList.vsd" />
+    <None Include="Doc\OfficialSite.url" />
+    <None Include="Doc\RemoveEmailList.Script" />
+    <None Include="Doc\ScriptEditor.psd" />
+    <None Include="Doc\Scripts%28obsolete%29.doc" />
+    <None Include="Doc\TechSupportResponse.Script" />
+    <None Include="Doc\TechSupportResponse.Script.bak" />
+    <None Include="Doc\TechSupportScreen.vsd" />
+    <None Include="Doc\vssver.scc" />
+    <None Include="My Project\Settings.settings">
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Doc\FaenaMailDBDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FaenaMailDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAbout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAccounts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCompose.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDspTime.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNewMailNotify.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOptions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProductID.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProperties.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmScriptEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmScriptWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSet1stScript.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSetEmail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSetFilter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSetMailList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSetSQL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUDConfirm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmViewEmail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWait.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InternetTime.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ListViewSortClass1.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Module1.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ScriptBox.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ScriptBoxArray.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SimpleTimeZone.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ThreeDLine.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TimezoneComparer.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TimeZones.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Win32TimeZone.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="FrmAbout.resx">
+      <DependentUpon>FrmAbout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAccounts.resx">
+      <DependentUpon>FrmAccounts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCompose.resx">
+      <DependentUpon>FrmCompose.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDspTime.resx">
+      <DependentUpon>FrmDspTime.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNewMailNotify.resx">
+      <DependentUpon>FrmNewMailNotify.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOptions.resx">
+      <DependentUpon>FrmOptions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProductID.resX">
+      <DependentUpon>FrmProductID.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProperties.resx">
+      <DependentUpon>FrmProperties.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmScriptEditor.resx">
+      <DependentUpon>FrmScriptEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmScriptWindow.resx">
+      <DependentUpon>FrmScriptWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSet1stScript.resx">
+      <DependentUpon>FrmSet1stScript.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSetEmail.resx">
+      <DependentUpon>FrmSetEmail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSetFilter.resx">
+      <DependentUpon>FrmSetFilter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSetMailList.resx">
+      <DependentUpon>FrmSetMailList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSetSQL.resx">
+      <DependentUpon>FrmSetSQL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStart.resx">
+      <DependentUpon>FrmStart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUDConfirm.resx">
+      <DependentUpon>FrmUDConfirm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmView.resx">
+      <DependentUpon>FrmView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmViewEmail.resx">
+      <DependentUpon>FrmViewEmail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmWait.resx">
+      <DependentUpon>FrmWait.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScriptBox.resx">
+      <DependentUpon>ScriptBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThreeDLine.resx">
+      <DependentUpon>ThreeDLine.vb</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="Doc\1stTimeMainScreen.jpg" />
+    <Content Include="Doc\4151466_F_store.jpg" />
+    <Content Include="Doc\49_temp1.jpg" />
+    <Content Include="Doc\AppInfo.xml" />
+    <Content Include="Doc\Arrow-Flash.jpg" />
+    <Content Include="Doc\column with contents_image001.bmp" />
+    <Content Include="Doc\column-with-contents_image1.jpg" />
+    <Content Include="Doc\FaenaMail.gif" />
+    <Content Include="Doc\FaenaMailClock.jpg" />
+    <Content Include="Doc\FaenaMailDB.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Doc\FaenaMailICO.ico" />
+    <Content Include="Doc\FaenaMailIcon.jpg" />
+    <Content Include="Doc\FaenaMailIcon.png" />
+    <Content Include="Doc\FaenaMailIconSize.gif" />
+    <Content Include="Doc\FaenaMailScriptDemoRegister.jpg" />
+    <Content Include="Doc\FaenaMailScriptDesktop.jpg" />
+    <Content Include="Doc\FaenaMailScriptEditor.jpg" />
+    <Content Include="Doc\FaenaMailSmall.gif" />
+    <Content Include="Doc\IEShortCut.ico" />
+    <Content Include="Doc\Rfc1939.txt" />
+    <Content Include="Doc\rfc822.txt" />
+    <Content Include="LetterClock.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

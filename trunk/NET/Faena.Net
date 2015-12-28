@@ -1,0 +1,1495 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Faena.Net</name>
+    </assembly>
+    <members>
+        <member name="T:Faena.Net.Dns.MX_Record">
+            <summary>
+            MX record class.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.Dns.MX_Record.#ctor(System.Int32,System.String)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="preference">MX record preference.</param>
+            <param name="host">Mail host dns name.</param>
+        </member>
+        <member name="P:Faena.Net.Dns.MX_Record.Preference">
+            <summary>
+            Gets MX record preference.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Dns.MX_Record.Host">
+            <summary>
+            Gets mail host dns name.
+            </summary>
+        </member>
+        <member name="T:Faena.Net.Dns.Dns_Answer">
+            <summary>
+            Summary description for Dns_Answer.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.Dns.Dns_Answer.#ctor(System.String,Faena.Net.Dns.QTYPE,System.Int32,System.Int32,System.Int32,System.Object)">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.Dns.Dns_Answer.GetRecordType">
+            <summary>
+            Gets query type eg. MX.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Faena.Net.Dns.Dns_Answer.NAME">
+            <summary>
+            A domain name to which this resource record pertains.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Dns.Dns_Answer.QTYPE">
+            <summary>
+            This field specifies the meaning of the data in the RDATA field.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Dns.Dns_Answer.CLASS">
+            <summary>
+            Two octets which specify the class of the data in the RDATA field.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Dns.Dns_Answer.TTL">
+            <summary>
+            a 32 bit unsigned integer that specifies the time
+            interval (in seconds) that the resource record may be
+            cached before it should be discarded.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Dns.Dns_Answer.RDLENGTH">
+            <summary>
+            An unsigned 16 bit integer that specifies the length in octets of the RDATA field.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Dns.Dns_Answer.RecordObj">
+            <summary>
+            Gets answer object.
+            </summary>
+        </member>
+        <member name="T:Faena.Net.Dns.Dns_Answers">
+            <summary>
+            This class holds Dns answers returned by server.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.Dns.Dns_Answers.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.Dns.Dns_Answers.ParseAnswers(System.Byte[],System.Int32)">
+            <summary>
+            Parses answer.
+            </summary>
+            <param name="reply"></param>
+            <param name="queryID"></param>
+            <returns>Returns true if answer parsed successfully.</returns>
+        </member>
+        <member name="M:Faena.Net.Dns.Dns_Answers.ParseMxRecord(System.Byte[],System.Int32@)">
+            <summary>
+            Parses MX record.
+            </summary>
+            <param name="reply"></param>
+            <param name="offset"></param>
+            <returns>Returns null, if failed.</returns>
+        </member>
+        <member name="M:Faena.Net.Dns.Dns_Answers.GetMxRecordsFromAnswers">
+            <summary>
+            Gets MX records from answer collection and ORDERS them by preference.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Faena.Net.Dns.Dns_Answers.Answers">
+            <summary>
+            Gets answers.
+            </summary>
+        </member>
+        <member name="T:Faena.Net.Dns.Dns_Header">
+            <summary>
+            Summary description for Dns_Header.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.Dns.Dns_Header.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.Dns.Dns_Header.#ctor(System.Int32,Faena.Net.Dns.OPCODE)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <param name="opcode"></param>
+        </member>
+        <member name="M:Faena.Net.Dns.Dns_Header.GetHeader">
+            <summary>
+            Gets header.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Faena.Net.Dns.Dns_Header.ID">
+            <summary>
+            A 16 bit identifier assigned by the program that
+            generates any kind of query.  This identifier is copied
+            the corresponding reply and can be used by the requester
+            to match up replies to outstanding queries.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Dns.Dns_Header.OPCODE">
+            <summary>
+            A four bit field that specifies kind of query in this
+            message.  This value is set by the originator of a query
+            and copied into the response.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Dns.Dns_Header.RCODE">
+            <summary>
+            Response code - this 4 bit field is set as part of responses.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Dns.Dns_Header.QDCOUNT">
+            <summary>
+            an unsigned 16 bit integer specifying the number of
+            entries in the question section.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Dns.Dns_Header.ANCOUNT">
+            <summary>
+            an unsigned 16 bit integer specifying the number of
+            resource records in the answer section.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Dns.Dns_Header.NSCOUNT">
+            <summary>
+            an unsigned 16 bit integer specifying the number of name
+            server resource records in the authority records section.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Dns.Dns_Header.ARCOUNT">
+            <summary>
+            an unsigned 16 bit integer specifying the number of
+            resource records in the additional records section.
+            </summary>
+        </member>
+        <member name="T:Faena.Net.Dns.Dns_Query">
+            <summary>
+            Summary description for Dns_Query.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.Dns.Dns_Query.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.Dns.Dns_Query.#ctor(System.String,Faena.Net.Dns.QTYPE,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="qname"></param>
+            <param name="qtype"></param>
+            <param name="qclass"></param>
+        </member>
+        <member name="M:Faena.Net.Dns.Dns_Query.GetQuery(Faena.Net.Dns.Dns_Header)">
+            <summary>
+            Gets query.
+            </summary>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Faena.Net.Dns.Dns_Query.QNAME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Dns.Dns_Query.QTYPE">
+            <summary>
+            Gets query type.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Dns.Dns_Query.QCLASS">
+            <summary>
+            Gets query class.
+            </summary>
+        </member>
+        <member name="T:Faena.Net.Dns.DnsCache">
+            <summary>
+            Summary description for DnsCache.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.Dns.DnsCache.GetMXFromCache(System.String)">
+            <summary>
+            Tries to get MX records from cache, if any.
+            </summary>
+            <param name="domain"></param>
+            <returns>Returns null if not in cache.</returns>
+        </member>
+        <member name="M:Faena.Net.Dns.DnsCache.AddMXToCache(System.String,Faena.Net.Dns.MX_Record[])">
+            <summary>
+            Adds domain's MX records to cache.
+            </summary>
+            <param name="domain"></param>
+            <param name="mx"></param>
+        </member>
+        <member name="T:Faena.Net.Dns.DnsReplyCode">
+            <summary>
+            Dns reply codes.
+            </summary>
+        </member>
+        <member name="F:Faena.Net.Dns.DnsReplyCode.Ok">
+            <summary>
+            Requested records retrieved sucessfully.
+            </summary>
+        </member>
+        <member name="F:Faena.Net.Dns.DnsReplyCode.NoEntries">
+            <summary>
+            No requested records found.
+            </summary>
+        </member>
+        <member name="F:Faena.Net.Dns.DnsReplyCode.TempError">
+            <summary>
+            There was error retrieving records.
+            </summary>
+        </member>
+        <member name="T:Faena.Net.Dns.DnsEx">
+            <summary>
+            Dns.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.Dns.DnsEx.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.Dns.DnsEx.GetMXRecords(System.String,Faena.Net.Dns.MX_Record[]@)">
+            <summary>
+            Gets MX records.(MX records are sorted by preference, lower array element is prefered)
+            </summary>
+            <param name="domain"></param>
+            <param name="mxRecords"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Faena.Net.Dns.DnsEx.DnsServers">
+            <summary>
+            Gets or sets dns servers.
+            </summary>
+        </member>
+        <member name="T:Faena.Net.Dns.OPCODE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Faena.Net.Dns.OPCODE.QUERY">
+            <summary>
+             a standard query.
+            </summary>
+        </member>
+        <member name="F:Faena.Net.Dns.OPCODE.IQUERY">
+            <summary>
+            an inverse query.
+            </summary>
+        </member>
+        <member name="F:Faena.Net.Dns.OPCODE.STATUS">
+            <summary>
+            a server status request.
+            </summary>
+        </member>
+        <member name="T:Faena.Net.Dns.QTYPE">
+            <summary>
+            ´Query type.
+            </summary>
+        </member>
+        <member name="F:Faena.Net.Dns.QTYPE.A">
+            <summary>
+            a host address
+            </summary>
+        </member>
+        <member name="F:Faena.Net.Dns.QTYPE.NS">
+            <summary>
+            an authoritative name server
+            </summary>
+        </member>
+        <member name="F:Faena.Net.Dns.QTYPE.CNAME">
+            <summary>
+            the canonical name for an alias
+            </summary>
+        </member>
+        <member name="F:Faena.Net.Dns.QTYPE.SOA">
+            <summary>
+            marks the start of a zone of authority
+            </summary>
+        </member>
+        <member name="F:Faena.Net.Dns.QTYPE.WKS">
+            <summary>
+            a well known service description
+            </summary>
+        </member>
+        <member name="F:Faena.Net.Dns.QTYPE.PTR">
+            <summary>
+            a domain name pointer
+            </summary>
+        </member>
+        <member name="F:Faena.Net.Dns.QTYPE.HINFO">
+            <summary>
+            host information
+            </summary>
+        </member>
+        <member name="F:Faena.Net.Dns.QTYPE.MINFO">
+            <summary>
+            mailbox or mail list information
+            </summary>
+        </member>
+        <member name="F:Faena.Net.Dns.QTYPE.MX">
+            <summary>
+            mail exchange
+            </summary>
+        </member>
+        <member name="F:Faena.Net.Dns.QTYPE.TXT">
+            <summary>
+            text strings
+            </summary>
+        </member>
+        <member name="F:Faena.Net.Dns.QTYPE.UnKnown">
+            <summary>
+            UnKnown
+            </summary>
+        </member>
+        <member name="T:Faena.Net.Dns.RCODE">
+            <summary>
+            Dns server reply codes.
+            </summary>
+        </member>
+        <member name="F:Faena.Net.Dns.RCODE.NO_ERROR">
+            <summary>
+            No error condition.
+            </summary>
+        </member>
+        <member name="F:Faena.Net.Dns.RCODE.FORMAT_ERRROR">
+            <summary>
+            Format error - The name server was unable to interpret the query.
+            </summary>
+        </member>
+        <member name="F:Faena.Net.Dns.RCODE.SERVER_FAILURE">
+            <summary>
+            Server failure - The name server was unable to process this query due to a problem with the name server.
+            </summary>
+        </member>
+        <member name="F:Faena.Net.Dns.RCODE.NAME_ERROR">
+            <summary>
+            Name Error - Meaningful only for responses from an authoritative name server, this code signifies that the
+            domain name referenced in the query does not exist.
+            </summary>
+        </member>
+        <member name="F:Faena.Net.Dns.RCODE.NOT_IMPLEMENTED">
+            <summary>
+            Not Implemented - The name server does not support the requested kind of query.
+            </summary>
+        </member>
+        <member name="F:Faena.Net.Dns.RCODE.REFUSED">
+            <summary>
+            Refused - The name server refuses to perform the specified operation for policy reasons.
+            </summary>
+        </member>
+        <member name="T:Faena.Net.FTP.Client.TransferMode">
+            <summary>
+            Transfer mode.
+            </summary>
+        </member>
+        <member name="F:Faena.Net.FTP.Client.TransferMode.Ascii">
+            <summary>
+            ASCII transfer mode.
+            </summary>
+        </member>
+        <member name="F:Faena.Net.FTP.Client.TransferMode.Binary">
+            <summary>
+            Binary transfer mode. 
+            </summary>
+        </member>
+        <member name="T:Faena.Net.FTP.Client.FTP_Client">
+            <summary>
+            Ftp client.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.FTP.Client.FTP_Client.#ctor">
+            <summary>
+            Default connection.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.FTP.Client.FTP_Client.Dispose">
+            <summary>
+            Clears resources and closes connection if open.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.FTP.Client.FTP_Client.Connect(System.String,System.Int32)">
+            <summary>
+            Connects to specified host.
+            </summary>
+            <param name="host">Host name.</param>
+            <param name="port">Port.</param>
+        </member>
+        <member name="M:Faena.Net.FTP.Client.FTP_Client.Disconnect">
+            <summary>
+            Disconnects from active host.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.FTP.Client.FTP_Client.Authenticate(System.String,System.String)">
+            <summary>
+            Authenticates user.
+            </summary>
+            <param name="userName">User name.</param>
+            <param name="password">Password.</param>
+        </member>
+        <member name="M:Faena.Net.FTP.Client.FTP_Client.SetCurrentDir(System.String)">
+            <summary>
+            Sets current directory.
+            </summary>
+            <param name="dir">Directory.</param>
+        </member>
+        <member name="M:Faena.Net.FTP.Client.FTP_Client.CreateDir(System.String)">
+            <summary>
+            Creates directory.
+            </summary>
+            <param name="dir"></param>
+        </member>
+        <member name="M:Faena.Net.FTP.Client.FTP_Client.ReceiveFile(System.String,Faena.Net.FTP.Client.TransferMode,System.String)">
+            <summary>
+            Recieves specified file from server.
+            </summary>
+            <param name="fileName">File name of file which to recieve.</param>
+            <param name="mode">Transfer mode.</param>
+            <param name="putFileName">File path+name which to store.</param>
+        </member>
+        <member name="M:Faena.Net.FTP.Client.FTP_Client.ReceiveFile(System.String,Faena.Net.FTP.Client.TransferMode,System.IO.Stream)">
+            <summary>
+            Recieves specified file from server.
+            </summary>
+            <param name="fileName">File name of file which to recieve.</param>
+            <param name="mode">Transfer mode.</param>
+            <param name="storeStream">Stream where to store file.</param>
+        </member>
+        <member name="M:Faena.Net.FTP.Client.FTP_Client.StoreFile(System.String,System.String,Faena.Net.FTP.Client.TransferMode)">
+            <summary>
+            Stores specified file to server.
+            </summary>
+            <param name="getFileName">File path+name which to store in server.</param>
+            <param name="fileName">File name to store in server.</param>
+            <param name="mode">Transfer mode.</param>
+        </member>
+        <member name="M:Faena.Net.FTP.Client.FTP_Client.StoreFile(System.IO.Stream,System.String,Faena.Net.FTP.Client.TransferMode)">
+            <summary>
+            Stores specified file to server.
+            </summary>
+            <param name="getStream">Stream from where to gets file.</param>
+            <param name="fileName">File name to store in server.</param>
+            <param name="mode">Transfer mode.</param>
+        </member>
+        <member name="M:Faena.Net.FTP.Client.FTP_Client.DeleteFile(System.String)">
+            <summary>
+            Deletes specified file or directory.
+            </summary>
+            <param name="file">File name.</param>
+        </member>
+        <member name="M:Faena.Net.FTP.Client.FTP_Client.Rename(System.String)">
+            <summary>
+            Renames specified file or directory.
+            </summary>
+            <param name="file">File name.</param>
+        </member>
+        <member name="M:Faena.Net.FTP.Client.FTP_Client.GetsList">
+            <summary>
+            GetsList
+            </summary>
+            <param/>
+        </member>
+        <member name="M:Faena.Net.FTP.Client.FTP_Client.SetTransferMode(Faena.Net.FTP.Client.TransferMode)">
+            <summary>
+            Sets transfer mode.
+            </summary>
+            <param name="mode">Transfer mode.</param>
+        </member>
+        <member name="T:Faena.Net.ICMP.ICMP_Type">
+            <summary>
+            ICMP type.
+            </summary>
+        </member>
+        <member name="F:Faena.Net.ICMP.ICMP_Type.EchoReply">
+            <summary>
+            Echo rely.
+            </summary>
+        </member>
+        <member name="F:Faena.Net.ICMP.ICMP_Type.TimeExceeded">
+            <summary>
+            Time to live exceeded reply.
+            </summary>
+        </member>
+        <member name="F:Faena.Net.ICMP.ICMP_Type.Echo">
+            <summary>
+            Echo.
+            </summary>
+        </member>
+        <member name="T:Faena.Net.ICMP.EchoMessage">
+            <summary>
+            Echo reply message.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.ICMP.EchoMessage.#ctor(System.String,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="ip"></param>
+            <param name="ttl"></param>
+            <param name="time"></param>
+        </member>
+        <member name="M:Faena.Net.ICMP.EchoMessage.ToStringEx">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Faena.Net.ICMP.EchoMessage.ToStringEx(Faena.Net.ICMP.EchoMessage[])">
+            <summary>
+            
+            </summary>
+            <param name="messages"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Faena.Net.ICMP.Icmp">
+            <summary>
+            Icmp utils.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.ICMP.Icmp.Trace(System.String)">
+            <summary>
+            Traces specified ip.
+            </summary>
+            <param name="destIP"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Faena.Net.Mime.MimeEntry">
+            <summary>
+            Mime entry.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.Mime.MimeEntry.#ctor(System.String,Faena.Net.Mime.MimeParser)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="mimeEntry"></param>
+            <param name="mime"></param>
+        </member>
+        <member name="M:Faena.Net.Mime.MimeEntry.ParseHeaders(System.String)">
+            <summary>
+            Parses mime entry headers.
+            </summary>
+            <param name="mimeEntry"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Faena.Net.Mime.MimeEntry.ParseContentType(System.String)">
+            <summary>
+            Parse content type.
+            </summary>
+            <param name="headers"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Faena.Net.Mime.MimeEntry.ParseCharSet(System.String)">
+            <summary>
+            Parse charset.
+            </summary>
+            <param name="headers"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Faena.Net.Mime.MimeEntry.ParseEncoding(System.String)">
+            <summary>
+            Parse encoding.
+            </summary>
+            <param name="headers"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Faena.Net.Mime.MimeEntry.ParseFileName(System.String)">
+            <summary>
+            Parse file name.
+            </summary>
+            <param name="headers"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Faena.Net.Mime.MimeEntry.ParseData(System.String)">
+            <summary>
+            Parse entry data.
+            </summary>
+            <param name="mimeDataEntry"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeEntry.ContentType">
+            <summary>
+            Gets content type.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeEntry.ContentDisposition">
+            <summary>
+            Gets content disposition type.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeEntry.FileName">
+            <summary>
+            Gets file name. NOTE: available only if ContentDisposition.Attachment.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeEntry.Data">
+            <summary>
+            Gets mime entry data.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeEntry.DataS">
+            <summary>
+            Gets string data. NOTE: available only if content-type=text/xxx.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeEntry.MimeEntries">
+            <summary>
+            Gets nested mime entries.
+            </summary>
+        </member>
+        <member name="T:Faena.Net.Mime.Disposition">
+            <summary>
+            Content disposition.
+            </summary>
+        </member>
+        <member name="F:Faena.Net.Mime.Disposition.Attachment">
+            <summary>
+            Content is attachment.
+            </summary>
+        </member>
+        <member name="F:Faena.Net.Mime.Disposition.Inline">
+            <summary>
+            Content is embbed resource.
+            </summary>
+        </member>
+        <member name="F:Faena.Net.Mime.Disposition.Unknown">
+            <summary>
+            Content is unknown.
+            </summary>
+        </member>
+        <member name="T:Faena.Net.Mime.MimeParser">
+            <summary>
+            Mime parser.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.Mime.MimeParser.#ctor(System.Byte[])">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="msg">Mime message which to parse.</param>
+        </member>
+        <member name="M:Faena.Net.Mime.MimeParser.ParseHeaders(System.IO.MemoryStream)">
+            <summary>
+            Parses mime headers from message.
+            </summary>
+            <param name="msgStrm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Faena.Net.Mime.MimeParser.ParseFrom(System.String)">
+            <summary>
+            Parse sender from message.
+            </summary>
+            <param name="headers"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Faena.Net.Mime.MimeParser.ParseSubject(System.String)">
+            <summary>
+            Parses subject from message.
+            </summary>
+            <param name="headers"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Faena.Net.Mime.MimeParser.ParseDate(System.String)">
+            <summary>
+            Parse message date.
+            </summary>
+            <param name="headers"></param>
+        </member>
+        <member name="M:Faena.Net.Mime.MimeParser.ParseMessageID(System.String)">
+            <summary>
+            Parse message ID.
+            </summary>
+            <param name="headers"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Faena.Net.Mime.MimeParser.ParseContentType(System.String)">
+            <summary>
+            Parse content type.
+            </summary>
+            <param name="headers"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Faena.Net.Mime.MimeParser.ParseBoundaryID(System.String)">
+            <summary>
+            Parse boundaryID.
+            </summary>
+            <param name="headers"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Faena.Net.Mime.MimeParser.ParseEntries(System.IO.MemoryStream,System.Int32,System.String)">
+            <summary>
+            Parses mime entries.
+            </summary>
+            <param name="msgStrm"></param>
+            <param name="pos"></param>
+            <param name="boundaryID"></param>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeParser.Headers">
+            <summary>
+            Gets message headers.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeParser.From">
+            <summary>
+            Gets sender.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeParser.To">
+            <summary>
+            Gets recipients.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeParser.Subject">
+            <summary>
+            Gets subject.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeParser.BodyText">
+            <summary>
+            Gets message body text.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeParser.MessageID">
+            <summary>
+            Gets messageID.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeParser.ContentType">
+            <summary>
+            Gets messageID.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeParser.MessageDate">
+            <summary>
+            Gets message date.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeParser.MimeEntries">
+            <summary>
+            Gets mime entries.
+            </summary>
+        </member>
+        <member name="T:Faena.Net.Mime.Attachment">
+            <summary>
+            Attachment.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.Mime.Attachment.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:Faena.Net.Mime.Attachment.#ctor(System.String,System.IO.Stream)">
+            <summary>
+            
+            </summary>
+            <param name="fileName"></param>
+            <param name="strm"></param>
+        </member>
+        <member name="M:Faena.Net.Mime.Attachment.#ctor(System.String,System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="fileName"></param>
+            <param name="fileData"></param>
+        </member>
+        <member name="P:Faena.Net.Mime.Attachment.FileName">
+            <summary>
+            Gets file name.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.Attachment.FileData">
+            <summary>
+            Gets file data.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.Attachment.AttachmentType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Faena.Net.Mime.Attachments">
+            <summary>
+            Attachments collection.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.Mime.Attachments.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Faena.Net.Mime.Attachments.Add(Faena.Net.Mime.Attachment)">
+            <summary>
+            
+            </summary>
+            <param name="attachment"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Faena.Net.Mime.Attachments.Item(System.Int32)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Faena.Net.Mime.MimeConstructor">
+            <summary>
+            Mime constructor.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.Mime.MimeConstructor.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.Mime.MimeConstructor.ConstructMime">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Faena.Net.Mime.MimeConstructor.CEnCode(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeConstructor.MessageID">
+            <summary>
+            Gets or sets mesaage ID.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeConstructor.To">
+            <summary>
+            Gets or sets receptients.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeConstructor.From">
+            <summary>
+            Gets or sets sender.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeConstructor.Subject">
+            <summary>
+            Gets or sets subject.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeConstructor.Date">
+            <summary>
+            Gets or sets message date.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeConstructor.Body">
+            <summary>
+            Gets or sets body text.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeConstructor.BodyHtml">
+            <summary>
+            Gets or sets html body.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeConstructor.CharSet">
+            <summary>
+            Gets or sets message charset. Default is 'iso-8859-1'.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeConstructor.Attachments">
+            <summary>
+            Gets referance to attachments collection.
+            </summary>
+        </member>
+        <member name="T:Faena.Net.Mime.MimeMessage">
+            <summary>
+            Summary description for Mime.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.Mime.MimeMessage.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Faena.Net.Mime.MimeMessage.#ctor(System.String,System.String[],System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="from"></param>
+            <param name="to"></param>
+            <param name="subject"></param>
+            <param name="body"></param>
+        </member>
+        <member name="M:Faena.Net.Mime.MimeMessage.CreateMime(System.String,System.String[],System.String,System.String,System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="from"></param>
+            <param name="to"></param>
+            <param name="subject"></param>
+            <param name="body"></param>
+            <param name="attachments"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeMessage.From">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeMessage.To">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeMessage.Subject">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeMessage.Date">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeMessage.Body">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeMessage.HtmlBody">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeMessage.Attachments">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeMessage.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Faena.Net.Mime.MimeMessage.Mime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Faena.Net.POP3.Client.POP3_Client">
+            <summary>
+            POP3 Client.
+            </summary>
+            <example>
+            <code>
+            using(POP3_Client c = new POP3_Client()){
+            	c.Connect("ivx",110);
+            	c.Authenticate("test","test");
+            	
+            	POP3_MessagesInfo mInf = c.GetMessagesInfo();
+            	
+            	// Do your suff
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:Faena.Net.POP3.Client.POP3_Client.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.POP3.Client.POP3_Client.Dispose">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.POP3.Client.POP3_Client.Connect(System.String,System.Int32)">
+            <summary>
+            Connects to specified host.
+            </summary>
+            <param name="host">Host name.</param>
+            <param name="port">Port number.</param>
+        </member>
+        <member name="M:Faena.Net.POP3.Client.POP3_Client.Disconnect">
+            <summary>
+            Closes connection to POP3 server.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.POP3.Client.POP3_Client.Authenticate(System.String,System.String)">
+            <summary>
+            Authenticates user. If POP3 server supports APOP, then APOP is used, otherwise normal login used.
+            </summary>
+            <param name="userName">User login name.</param>
+            <param name="password">Password.</param>
+        </member>
+        <member name="M:Faena.Net.POP3.Client.POP3_Client.GetMessagesInfo">
+            <summary>
+            Gets messages info.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.POP3.Client.POP3_Client.GetUidlList">
+            <summary>
+            Gets uid listing.
+            </summary>
+            <returns>Returns Hashtable containing uidl listing. Key column contains message UID and value contains message number.</returns>
+        </member>
+        <member name="M:Faena.Net.POP3.Client.POP3_Client.GetMessage(System.Int32)">
+            <summary>
+            Gets specified message.
+            </summary>
+            <param name="nr">Message number.</param>
+        </member>
+        <member name="M:Faena.Net.POP3.Client.POP3_Client.DeleteMessage(System.Int32)">
+            <summary>
+            Deletes specified message
+            </summary>
+            <param name="messageNr">Message number.</param>
+        </member>
+        <member name="M:Faena.Net.POP3.Client.POP3_Client.GetTopOfMessage(System.Int32,System.Int32)">
+            <summary>
+            Gets top lines of message.
+            </summary>
+            <param name="nr">Message number which top lines to get.</param>
+            <param name="nLines">Number of lines to get.</param>
+        </member>
+        <member name="T:Faena.Net.POP3.Client.POP3_MessageInfo">
+            <summary>
+            Holds POP3 message info.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.POP3.Client.POP3_MessageInfo.#ctor(System.Int32,System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="messageNr"></param>
+            <param name="messageSize"></param>
+        </member>
+        <member name="P:Faena.Net.POP3.Client.POP3_MessageInfo.MessageNr">
+            <summary>
+            Gets message number in POP3 server.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.POP3.Client.POP3_MessageInfo.MessageSize">
+            <summary>
+            Gets message size.
+            </summary>
+        </member>
+        <member name="T:Faena.Net.POP3.Client.POP3_MessagesInfo">
+            <summary>
+            Holds POP3 messages info.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.POP3.Client.POP3_MessagesInfo.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.POP3.Client.POP3_MessagesInfo.GetMessageInfo(System.Int32)">
+            <summary>
+            Gets specified message info.
+            </summary>
+            <param name="nr"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Faena.Net.POP3.Client.POP3_MessagesInfo.TotalSize">
+            <summary>
+            Gets total size of messages.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.POP3.Client.POP3_MessagesInfo.Count">
+            <summary>
+            Gets messages count.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.POP3.Client.POP3_MessagesInfo.Messages">
+            <summary>
+            Gets list of messages.
+            </summary>
+        </member>
+        <member name="T:Faena.Net.SMTP.Client.PartOfMessage_EventArgs">
+            <summary>
+            Summary description for PartOfMessage_EventArgs.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.SMTP.Client.PartOfMessage_EventArgs.#ctor(System.String,System.Int64,System.Int64,System.Int64)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="jobID"></param>
+            <param name="sentBlockSize">Size of sent block.</param>
+            <param name="totalSent"></param>
+            <param name="messageSize"></param>
+        </member>
+        <member name="P:Faena.Net.SMTP.Client.PartOfMessage_EventArgs.JobID">
+            <summary>
+            Gets job ID which these properties are.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.SMTP.Client.PartOfMessage_EventArgs.SentBlockSize">
+            <summary>
+            Gets bytes what has sent  on this sendjob.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.SMTP.Client.PartOfMessage_EventArgs.TotalSent">
+            <summary>
+            Gets total bytes what has been sent on this sendjob.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.SMTP.Client.PartOfMessage_EventArgs.MessageSize">
+            <summary>
+            Gets message size.
+            </summary>
+        </member>
+        <member name="T:Faena.Net.SMTP.Client.SendJob_EventArgs">
+            <summary>
+            Summary description for SendJob_Eventargs.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.SMTP.Client.SendJob_EventArgs.#ctor(System.String,System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="jobID"></param>
+            <param name="to"></param>
+        </member>
+        <member name="M:Faena.Net.SMTP.Client.SendJob_EventArgs.#ctor(System.String,System.String[],System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="jobID"></param>
+            <param name="to"></param>
+            <param name="defectiveEmails"></param>
+        </member>
+        <member name="P:Faena.Net.SMTP.Client.SendJob_EventArgs.JobID">
+            <summary>
+            Gets send job ID.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.SMTP.Client.SendJob_EventArgs.To">
+            <summary>
+            Gets this send job's email addresses.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.SMTP.Client.SendJob_EventArgs.DeffectiveEmails">
+            <summary>
+            Gets email addresses to which message couldn't be sent.
+            </summary>
+        </member>
+        <member name="T:Faena.Net.SMTP.Client.SMTP_ErrorType">
+            <summary>
+            SMTP error types.
+            </summary>
+        </member>
+        <member name="F:Faena.Net.SMTP.Client.SMTP_ErrorType.ConnectionError">
+            <summary>
+            Connection related error.
+            </summary>
+        </member>
+        <member name="F:Faena.Net.SMTP.Client.SMTP_ErrorType.InvalidEmailAddress">
+            <summary>
+            Email address doesn't exist.
+            </summary>
+        </member>
+        <member name="F:Faena.Net.SMTP.Client.SMTP_ErrorType.NotSupported">
+            <summary>
+            Some feature isn't supported.
+            </summary>
+        </member>
+        <member name="F:Faena.Net.SMTP.Client.SMTP_ErrorType.UnKnown">
+            <summary>
+            Unknown error.
+            </summary>
+        </member>
+        <member name="T:Faena.Net.SMTP.Client.SMTP_Error_EventHandler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Faena.Net.SMTP.Client.SMTP_PartOfMessage_EventHandler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Faena.Net.SMTP.Client.SMTP_SendJob_EventHandler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Faena.Net.SMTP.Client.SMTP_Client">
+            <summary>
+            SMTP Client.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.SMTP.Client.SMTP_Client.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.SMTP.Client.SMTP_Client.#ctor(System.Windows.Forms.Control)">
+            <summary>
+            Use this constructor if you use this component on UI component.
+            NOTE: Events are invoked on UI Thread.
+            </summary>
+            <param name="ownerUI"></param>
+        </member>
+        <member name="M:Faena.Net.SMTP.Client.SMTP_Client.BeginSend(System.String[],System.String,System.IO.Stream)">
+            <summary>
+            Starts asynchronous sending.
+            </summary>
+            <param name="to">Recipients, may be from different e-domain when using dns or relay is allowed in smart host.</param>
+            <param name="from">Sendres email address.</param>
+            <param name="message">Stream which contains message. NOTE: reading from stream is started from stream current position.</param>
+        </member>
+        <member name="M:Faena.Net.SMTP.Client.SMTP_Client.BeginSend">
+            <summary>
+            This function just controls sending.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.SMTP.Client.SMTP_Client.Send(System.String[],System.String,System.IO.Stream)">
+            <summary>
+            
+            </summary>
+            <param name="to"></param>
+            <param name="from"></param>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Faena.Net.SMTP.Client.SMTP_Client.RemoveSenderThread(System.Threading.Thread)">
+            <summary>
+            Removes sender Thread - Thread has finnished sending.
+            </summary>
+            <param name="t"></param>
+        </member>
+        <member name="M:Faena.Net.SMTP.Client.SMTP_Client.IsReplyCode(System.String,System.String)">
+            <summary>
+            Checks if reply code.
+            </summary>
+            <param name="replyCode">Replay code to check.</param>
+            <param name="reply">Full repaly.</param>
+            <returns>Retruns true if reply is as specified.</returns>
+        </member>
+        <member name="M:Faena.Net.SMTP.Client.SMTP_Client.OnPartOfMessageIsSent(System.Int64,System.Int64,System.Int64)">
+            <summary>
+            Raises PartOfMessageIsSent event.
+            </summary>
+            <param name="sentBlockSize"></param>
+            <param name="totalSent"></param>
+            <param name="messageSize"></param>
+        </member>
+        <member name="M:Faena.Net.SMTP.Client.SMTP_Client.OnNewSendJobStarted(System.String,System.String[])">
+            <summary>
+            Raises NewSendJob event.
+            </summary>
+            <param name="jobID"></param>
+            <param name="to"></param>
+        </member>
+        <member name="M:Faena.Net.SMTP.Client.SMTP_Client.OnSendJobCompleted(System.String,System.String[],System.Collections.ArrayList)">
+            <summary>
+            Raises SendJobCompleted event.
+            </summary>
+            <param name="jobID"></param>
+            <param name="to"></param>
+            <param name="defectiveEmails"></param>
+        </member>
+        <member name="M:Faena.Net.SMTP.Client.SMTP_Client.OnCompletedAll">
+            <summary>
+            Raises CompletedAll event.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.SMTP.Client.SMTP_Client.OnError(Faena.Net.SMTP.Client.SMTP_ErrorType,System.String[],System.String)">
+            <summary>
+            Raises Error event.
+            </summary>
+            <param name="type">Error type.</param>
+            <param name="affectedAddresses">Affected email addresses.</param>
+            <param name="errorText">Error text.</param>
+        </member>
+        <member name="E:Faena.Net.SMTP.Client.SMTP_Client.PartOfMessageIsSent">
+            <summary>
+            Is raised when some send jobs message part is sent.
+            </summary>
+        </member>
+        <member name="E:Faena.Net.SMTP.Client.SMTP_Client.NewSendJob">
+            <summary>
+            Is raised when new send job starts.
+            </summary>
+        </member>
+        <member name="E:Faena.Net.SMTP.Client.SMTP_Client.SendJobCompleted">
+            <summary>
+            Is raised when send job completes.
+            </summary>
+        </member>
+        <member name="E:Faena.Net.SMTP.Client.SMTP_Client.Error">
+            <summary>
+            Is raised when error occurs.
+            </summary>
+        </member>
+        <member name="E:Faena.Net.SMTP.Client.SMTP_Client.CompletedAll">
+            <summary>
+            Is raised when all sedjobs are completed.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.SMTP.Client.SMTP_Client.SmartHost">
+            <summary>
+            Gets or sets smart host. Eg. 'mail.yourserver.net'.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.SMTP.Client.SMTP_Client.DnsServers">
+            <summary>
+            Gets or sets dns servers(IP addresses).
+            </summary>
+        </member>
+        <member name="P:Faena.Net.SMTP.Client.SMTP_Client.UseSmartHost">
+            <summary>
+            Gets or sets if mail is sent through smart host or using dns.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.SMTP.Client.SMTP_Client.Port">
+            <summary>
+            Gets or sets SMTP port.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.SMTP.Client.SMTP_Client.MaxSenderThreads">
+            <summary>
+            Gets or sets maximum sender Threads.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.SMTP.Client.SMTP_Client.Errors">
+            <summary>
+            Gets last send attempt errors.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.SMTP.Client.SMTP_Client.IsSending">
+            <summary>
+            Gets if some send job is active.
+            </summary>
+        </member>
+        <member name="T:Faena.Net.SMTP.Client.SMTP_Error">
+            <summary>
+            This class holds smtp error info.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.SMTP.Client.SMTP_Error.#ctor(Faena.Net.SMTP.Client.SMTP_ErrorType,System.String[],System.String)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="errorType"></param>
+            <param name="affectedEmails"></param>
+            <param name="errorText"></param>
+        </member>
+        <member name="P:Faena.Net.SMTP.Client.SMTP_Error.ErrorType">
+            <summary>
+            Gets SMTP error type.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.SMTP.Client.SMTP_Error.AffectedEmails">
+            <summary>
+            Gets list of email addresses which are affected by this error.
+            </summary>
+        </member>
+        <member name="P:Faena.Net.SMTP.Client.SMTP_Error.ErrorText">
+            <summary>
+            Gets additional error text.
+            </summary>
+        </member>
+        <member name="T:Faena.Net.StreamLineReader">
+            <summary>
+            Byte[] line parser.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.StreamLineReader.#ctor(System.IO.Stream)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="strmSource"></param>
+        </member>
+        <member name="M:Faena.Net.StreamLineReader.ReadLine">
+            <summary>
+            Reads byte[] line from stream.
+            </summary>
+            <returns>Return null if end of stream reached.</returns>
+        </member>
+        <member name="T:Faena.Net.Core">
+            <summary>
+            Summary description for Core.
+            </summary>
+        </member>
+        <member name="M:Faena.Net.Core.DoPeriodHandling(System.Byte[],System.Boolean)">
+            <summary>
+            Does period handling.
+            </summary>
+            <param name="data"></param>
+            <param name="add_Remove">If true add periods, else removes periods.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Faena.Net.Core.DoPeriodHandling(System.IO.Stream,System.Boolean)">
+            <summary>
+            Does period handling.
+            </summary>
+            <param name="strm">Input stream.</param>
+            <param name="add_Remove">If true add periods, else removes periods.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Faena.Net.Core.ReadLine(System.Net.Sockets.TcpClient)">
+            <summary>
+            Reads line of data from TcpClient.
+            </summary>
+            <param name="clnt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Faena.Net.Core.ReadData(System.Net.Sockets.TcpClient,System.String)">
+            <summary>
+            Reads byte data from stream while gets terminator or timeout.
+            </summary>
+            <param name="clnt"></param>
+            <param name="terminator"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Faena.Net.Core.ReadDataS(System.Net.Sockets.TcpClient,System.String)">
+            <summary>
+            Overoladed ReadData, differs only return type.
+            </summary>
+            <param name="clnt"></param>
+            <param name="terminator"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Faena.Net.Core.SendDataS(System.Net.Sockets.TcpClient,System.String)">
+            <summary>
+            Sends data to TcpClient.
+            </summary>
+            <param name="clnt"></param>
+            <param name="data">Data which to send.</param>
+        </member>
+        <member name="M:Faena.Net.Core.ParseEmailFromPath(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Faena.Net.Core.QDecode(System.Text.Encoding,System.String)">
+            <summary>
+            quoted-printable decoder.
+            </summary>
+            <param name="encoding">Input string encoding.</param>
+            <param name="data">String which to encode.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
